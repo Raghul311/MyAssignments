@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 public class SalesForceTC2 extends ProjectSpecificMethod {
 	@Test
 	public void testcase2() throws InterruptedException {
+		driver.findElement(By.xpath("//div[text()='New']")).click();
 		driver.findElement(By.xpath("//input[@name='CompanyName']")).sendKeys("TestLeaf");
 		driver.findElement(By.xpath("(//textarea[@class='slds-textarea'])[2]")).sendKeys("Salesforce");
 		Thread.sleep(1000);

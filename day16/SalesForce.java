@@ -29,6 +29,7 @@ public class SalesForce extends ProjectSpecificMethod {
 		 * driver.findElement(By.xpath("//p[text()='Legal Entities']")).click();
 		 * driver.findElement(By.xpath("//div[text()='New']")).click();
 		 */
+		driver.findElement(By.xpath("//div[text()='New']")).click();
 		driver.findElement(By.xpath("//input[@name='CompanyName']")).sendKeys("TestLeaf");
 		driver.findElement(By.xpath("(//textarea[@class='slds-textarea'])[2]")).sendKeys("Salesforce");
 		Thread.sleep(1000);

@@ -12,11 +12,11 @@ import org.testng.annotations.Parameters;
 
 public class ProjectSpecificMethod {
 	ChromeOptions options;
-	ChromeDriver driver;
+	protected ChromeDriver driver;
 	@Parameters({"url","username","password"})
 
 	@BeforeMethod
-	public void preCondition1(String link, String user, String pass) throws InterruptedException {
+	protected void preCondition1(String link, String user, String pass) throws InterruptedException {
 		options = new ChromeOptions();
 		options.addArguments("--disable-notifications");
 		options.addArguments("--incognito");
@@ -37,8 +37,6 @@ public class ProjectSpecificMethod {
 		Actions ac = new Actions(driver);
 		ac.scrollToElement(driver.findElement(By.xpath("//p[text()='Legal Entities']"))).perform();
 		driver.findElement(By.xpath("//p[text()='Legal Entities']")).click();
-		driver.findElement(By.xpath("//div[text()='New']")).click();
-
 	}
 	@AfterMethod
 	public void postCondition1() throws InterruptedException {

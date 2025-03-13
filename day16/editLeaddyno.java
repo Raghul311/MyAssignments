@@ -4,11 +4,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
 
-public class EditLead extends projectSpecific {
-
-	@DataProvider(name="fetchdata")
+public class editLeaddyno extends projectSpecific{
+	@DataProvider(name="fetchData")
 	public String[][] sendData() {
 		String data[][] = new String[2][2];
 		data[0][0] = "98408";
@@ -21,7 +19,7 @@ public class EditLead extends projectSpecific {
 
 	}
 	@Test(dataProvider = "fetchData")
-	public void exicteEditLead(String pno, String cname) throws InterruptedException {
+	public void exicteEditLead1(String pno, String cname) throws InterruptedException {
 		driver.findElement(By.linkText("Leads")).click();
 		driver.findElement(By.linkText("Find Leads")).click();
 		driver.findElement(By.xpath("//span[text()='Phone']")).click();
@@ -42,7 +40,8 @@ public class EditLead extends projectSpecific {
 		} else {
 			System.out.println("Lead is not editted");
 		}
+		// driver.close();
 
 	}
-
 }
+

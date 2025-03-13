@@ -6,6 +6,7 @@ import org.testng.annotations.Test;
 public class SalesForceTC1 extends ProjectSpecificMethod {
 	@Test
 	public void testCase1() {
+		driver.findElement(By.xpath("//div[text()='New']")).click();
 		driver.findElement(By.xpath("//input[@name='Name']")).sendKeys("Salesforce Automation by Raghul");
 		driver.findElement(By.xpath("//button[text()='Save']")).click();
 		String enteredtext="Salesforce Automation by Raghul";
